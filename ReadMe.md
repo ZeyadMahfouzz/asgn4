@@ -18,7 +18,7 @@ This project implements an AI-powered chatbot that provides weather updates, mat
 ### 1. Install Dependencies
 Ensure you have Python 3.8+ installed, then install required libraries:
 ```sh
-pip install groq python-dotenv requests
+pip install -r requirments.txt
 ```
 
 ### 2. Configure API Keys
