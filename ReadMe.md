@@ -32,7 +32,7 @@ LLM_MODEL=your_llm_model
 ### 3. Running the Chatbot
 Execute the script and select an agent type:
 ```sh
-python chatbot.py
+python conversationalAgent.py
 ```
 Choose an agent:
 - `1` for Basic
