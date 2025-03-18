@@ -18,7 +18,7 @@ This project implements an AI-powered chatbot that provides weather updates, mat
 ### 1. Install Dependencies
 Ensure you have Python 3.8+ installed, then install required libraries:
 ```sh
-pip install groq python-dotenv requests
+pip install -r requirments.txt
 ```
 
 ### 2. Configure API Keys
@@ -32,7 +32,7 @@ LLM_MODEL=your_llm_model
 ### 3. Running the Chatbot
 Execute the script and select an agent type:
 ```sh
-python chatbot.py
+python conversationalAgent.py
 ```
 Choose an agent:
 - `1` for Basic
@@ -43,22 +43,30 @@ Choose an agent:
 
 ### **Basic Mode**
 ```
-User: What's the weather in London?
-Chatbot: It's 15°C and cloudy in London.
+You: Tell me about the weather in egypt for the next 5 days
+Chatbot: The weather in Egypt for the next 5 days is expected to be mostly sunny with no chance of rain. 
+
+On March 18th, it's expected to be sunny with a high of 29.7°C and a low of 16.8°C.
+
+On March 19th, it's expected to be sunny with a high of 26.1°C and a low of 14.1°C.
+
+On March 20th, it's expected to be sunny with a high of 20.6°C and a low of 11.9°C.
+
+On March 21st, it's expected to be partly cloudy with a high of 18.4°C and a low of 11.4°C.
+
+On March 22nd, it's expected to be partly cloudy with a high of 20.2°C and a low of 13.2°C.
 ```
 
 ### **Chain of Thought Mode**
 ```
-User: What's the weather like?
-Chatbot: First, I need to get the current weather. Fetching data...
-Chatbot: It's 20°C and sunny in New York.
+You: Tell me about the weather in egypt for the next 5 days
+Chatbot: The weather in Egypt for the next 5 days is expected to be sunny with no chance of rain. The maximum temperature will range from 20.2°C to 29.7°C, while the minimum temperature will range from 11.4°C to 16.8°C.
 ```
 
 ### **ReAct Mode**
 ```
-User: Compare New York and Tokyo weather.
-Chatbot: Thinking... I need to fetch weather for both cities.
-Chatbot: New York is 22°C and sunny. Tokyo is 18°C and rainy.
+You: Tell me about the weather in egypt for the next 5 days
+Chatbot: The weather in Egypt for the next 5 days is expected to be mostly sunny with no chance of rain. The maximum temperatures will range from 29.7°C on the 18th to 18.4°C on the 21st, while the minimum temperatures will range from 16.8°C on the 18th to 11.4°C on the 21st. The conditions will be sunny for the first three days, followed by partly cloudy skies on the 21st and 22nd.
 ```
 
 ## Analysis of Reasoning Strategies
